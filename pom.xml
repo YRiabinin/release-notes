@@ -14,6 +14,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.google.apis</groupId>
+      <artifactId>google-api-services-drive</artifactId>
+      <version>v2-rev168-1.20.0</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>rnapp</finalName>
