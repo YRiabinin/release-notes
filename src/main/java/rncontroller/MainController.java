@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletContextHandler;
+import org.eclipse.jetty.servlet.ServletHolder;
+
 /**
  * Servlet implementation class MainController
  */
@@ -21,4 +25,15 @@ public class MainController extends HttpServlet {
 		getServletContext().getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
+	
+	public static void main(String[] args) throws Exception {
+	    Server server = new Server(Integer.valueOf(System.getenv("PORT")));
+	    ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+	    context.setContextPath("/");
+	    server.setHandler(context);
+	    context.addServlet(new ServletHolder(new MainController()),"/*");
+	    server.start();
+	    server.join();
+	}
+	
 }
