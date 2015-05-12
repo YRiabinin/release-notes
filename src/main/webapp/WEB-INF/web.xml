@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>rncontroller.MainController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Foo</servlet-name>
+  	<display-name>Foo</display-name>
+  	<description></description>
+  	<servlet-class>rncontroller.Foo</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>MainController</servlet-name>
   	<url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Foo</servlet-name>
+  	<url-pattern>/foo</url-pattern>
   </servlet-mapping>
 </web-app>
