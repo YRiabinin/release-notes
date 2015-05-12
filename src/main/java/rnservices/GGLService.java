@@ -1,4 +1,4 @@
-package rncontroller;
+package rnservices;
 
 import gglconnector.GGLConnector;
 import gglconnector.GGLFileManager;
@@ -14,10 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Foo
  */
-public class Foo extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    	/**
+public class GGLService extends HttpServlet {
+	private static final long serialVersionUID = 5599195927405315789L;
+
+		/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -29,13 +29,6 @@ public class Foo extends HttpServlet {
 			e.printStackTrace();
 		}
 		response.getWriter().print("OK");
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 	}
 
 }

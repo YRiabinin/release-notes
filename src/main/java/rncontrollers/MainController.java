@@ -1,4 +1,4 @@
-package rncontroller;
+package rncontrollers;
 
 import gglconnector.GGLConnector;
 import gglconnector.GGLFileManager;
@@ -27,18 +27,6 @@ public class MainController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		getServletContext().getRequestDispatcher("index.jsp").forward(request, response);
-//		response.getWriter().print("Hello from Java!");
-	}
-
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		GGLFileManager fileManager = new GGLFileManager();
-		try {
-			fileManager.insertFile(GGLConnector.getDrive(), "TESTTTTT DOCUMENT", "document description", "", "text/plain", "document1.txt");
-		} catch (GeneralSecurityException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 }
